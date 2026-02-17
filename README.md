@@ -1,34 +1,29 @@
-Instructions
+This assignment is a great resource to learn how to master parent to child communication (passing props). It is important to know that callback functions matter because they let a child component notify the parent when something happens. They keep data flowing in one direction while still allowing interaction. They make your components work together instead of acting in isolation.
 
-Fork this repository to your own GitHub account.
+Instructions Below:
 
-Setup: Open your terminal in the project folder and run npm install.
+1) Create your own copy of the project by clicking Fork on GitHub.
+   
+2) Begin by: Open your terminal inside the project folder and run npm install. This will have every resource for the project.
 
 Coding Task:
 
-State: In App.jsx (Class Component), initialize your state using the data from data.js.
+Inside the App class component:
 
-Mapping: Use .map() to render at least two ChildComponent cards.
+Import initialData from data.js
 
-Events: Implement a method in the Parent to change a child's image/status. Pass this method to the Child via props.
+Set your state to use that data
 
-Child Logic: Complete ChildComponent.jsx to display the props and trigger the parent's method on button click.
+Inside App.jsx, write a method that:
 
-Why Vite?
+Receives an id, Finds the matching character, Updates its image and/or status, & Calls this.setState() with the updated array
 
-We are using Vite instead of the deprecated Create React App.
+3) Pass this to each child, Render Child compoenets with .map()
 
-Files: Ensure your components use the .jsx extension.
+4) Build-on ChildComponent.jsx
 
-Speed: You'll notice the development server starts almost instantly.
+5) Destructure the props in the child so you can use them easily, and make the button call onAction(id) to trigger the parent’s update method.
 
-How to Run
-
-Local Development
-
-Run the following command to start the Vite dev server:
-
-npm run dev
-
+6) Run the application by using npm run dev
 
 Note: Vite defaults to port 5173. Check your terminal output for the local URL.
